@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, rgb(255, 0, 234), rgb(42, 159, 255));
+}
+.payment {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  transform: translatey(-63px);
+  transition: 0.5s;
+}
+.payment:hover {
+  padding: 40px;
+  transform: translatey(0);
+}
+
+.payment .bg {
+  position: absolute;
+  bottom: 0px;
+  border-radius: 25px;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(255deg, #2196f3, #ff4efd);
+}
+
+.payment .card {
+  position: relative;
+  width: 580px;
+  height: 350px;
+  background: #fcfcfc;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0, 0.05);
+  z-index: 1000;
+  overflow: hidden;
+  transform: translatey(127px);
+  transition: 0.5s;
+}
+.payment:hover .card {
+  transform: translatey(0px);
+}
+.payment .card::before {
+  content: " ";
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0, 0.5)), transparent;
+  pointer-events: none;
+}
+
+.chip {
+  position: absolute;
+  max-width: 70px;
+}
+.logo {
+  position: absolute;
+  top: 130px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #ea222c;
+  border-radius: 50%;
+  box-shadow: -40px 0 0 rgba(0255, 164, 36, 0.5);
+}
+
+.bankname {
+  font-style: italic;
+  color: #999;
+  text-align: end;
+  outline: none;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+form {
+  margin-top: 45px;
+}
+.inputbox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.inputbox span {
+  color: #089cff;
+  font-size: 1.1em;
+}
+.inputbox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.8em;
+  color: #333;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group .inputbox:last-child {
+  max-width: 60px;
+}
+.btn {
+  position: relative;
+  margin-top: 40px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: rgb(28, 28, 202);
+  color: #ffff;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 5px 5px 8px rgb(54, 54, 54);
+}
+
+.btn:hover {
+  background: #ffffff;
+  color: rgb(28, 28, 202);
+}
+
+.btn:active {
+  transform: scale(0.8);
+}
